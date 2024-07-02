@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup form</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main">
+        <h1 class="title">Project: Sign-up Form</h1>
+    </header>
+    <main class="main">
+            <div class="left rounded-border">
+                <h2>whimsi.</h2>
+            </div>
+            <div class="right">
+                <div class="">
+                    <h2>Enter the ephemerality
+                    </h2>
+                    <p>This isn't a real service, merely a demonstration of my abilities</p>
+                    <p>Regardless, you'll still probably want to test it out, right?</p>
+                </div>
+                <div class="form">
+                    <form method="post">
+                        <div class ="form-row">
+                            <label for="first_name">First Name</label>
+                            <input class="form-input-box rounded-border" name="first_name" type="text" placeholder="." oninput="animateCreateAccountButton()" required />  
+                            <label for="last_name">Last Name</label>
+                            <input class="form-input-box rounded-border" name="last_name" type="text" placeholder="." oninput="animateCreateAccountButton()" required />  
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email</label>
+                            <input class="form-input-box rounded-border" name="email" type="email" placeholder="." oninput="animateCreateAccountButton()" required />  
+                            <label for="phone_number">Phone Number</label>
+                            <input class="form-input-box rounded-border" name="phone_number" type="text" placeholder="." oninput="animateCreateAccountButton()" pattern="(^([+]\d{2})?\d{10,11}$)" required/>  
+                        </div>
+                        <div class="form-row">
+                            <label for="password">Password</label>
+                            <input class="form-input-box rounded-border" name="password" type="password" placeholder="." oninput="animateCreateAccountButton()" required />  
+                            <label for="confirm_password">Confirm Password</label>
+                            <input class="form-input-box rounded-border" name="confirm_password" type="password" placeholder="." on oninput="animateCreateAccountButton()" required /> 
+                        </div> 
+                        <div class="form-row">
+                            <div class="create-account">
+                                <button class="create-account-button rounded-border animate-button-step-0" id="create-button" type="submit">Create Account</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <p>Already have an account? <a href="">Log In</a></p>
+                        </div>
+                    </form>
+                        
+                    </form>
+                </div>
+            </div>    
+        </main>
+</body>
+<script src="main.js"></script>
+</html>

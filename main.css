@@ -1,0 +1,390 @@
+/******
+CSS RESET 
+https://www.joshwcomeau.com/css/custom-css-reset/
+*******/
+
+/* 
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/******
+FONTS 
+*******/
+@font-face {
+    font-family: 'glacial_indifferencebold';
+    src: url('fonts/glacialindifference-bold-webfont.woff2') format('woff2'),
+         url('fonts/glacialindifference-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'glacial_indifferenceitalic';
+    src: url('fonts/glacialindifference-italic-webfont.woff2') format('woff2'),
+         url('fonts/glacialindifference-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'glacial_indifferenceregular';
+    src: url('fonts/glacialindifference-regular-webfont.woff2') format('woff2'),
+         url('fonts/glacialindifference-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/******
+SETUP
+*******/
+:root {
+  --main: #ecd4c4;  
+  --accent: #5A5A76;
+  --accent2:#7B8989;
+
+    font-size:10px;
+    color:var(--main);
+    margin: 0;
+    font-family: 'glacial_indifferenceregular', sans-serif;
+    background: bottom 0px right 0px no-repeat url("images/w.jpg");
+    background-size: auto;
+    text-transform: lowercase;
+}
+html {
+  height: 100%;
+  width: 100%;
+    }
+  
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    /* display: flex; */
+    font-size: 3.2rem;
+    font-family: 'glacial_indifferencebold', sans-serif;
+    /* color: #45455F; */
+    /* margin-left: 10vw; */
+    /* align-content: flex-end; */
+    
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+    font-family: 'glacial_indifferenceitalic', sans-serif;
+  }
+  
+  p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  a:link {
+    color: var(--accent);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: var(--main);
+  }
+
+  form label {
+    display:flex;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    letter-spacing: 0.07rem;
+    flex: 1;
+    margin-right: 0.8vh;
+    padding: 0;
+    /* width: 30px; */
+  }
+
+  form label:before {
+    display: flex;
+    content: "";
+    flex: 1;
+  }
+
+  form input {
+    flex: 1;
+    margin:0 auto;
+    padding: 0;
+  }
+
+
+  .rounded-border {
+    border-radius: 0.5rem;
+    border-color: var(--main);
+    border-style: hidden;
+    border-width: 1px;
+  }
+  .title {
+    display: absolute;
+    margin: 0.6vh 0.6vh 0.6vh 15vh;
+    /* border-radius: 3px;
+    border-color: white;
+    border-style: dashed;  */
+  }
+  .main { 
+    display: flex;
+    flex-direction: row;
+    /* width: 60%; */
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .left{ 
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: bottom 0px right 0px no-repeat url("images/w.jpg");
+    background-size: cover;
+    min-height: 90vh;
+    width: 50vw;
+    max-width: 50vh;
+    z-index: -1;
+    opacity: 0.8;
+  }
+
+  .right {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding: 15vh 30vh 0 0;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+
+  }
+
+  .form {
+    display: flex;
+    margin-left:1vh;
+    padding: 1.3vh;
+    /* border-radius: 3px;
+    border-color: white;
+    border-style: dashed;  */
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 100%;
+    min-width: 55vh;
+    min-height: 1vh;
+    padding: 0.4vh 0 0.4vh 0;
+    margin: 0 auto;
+    /* border-radius: 3px;
+    border-color: white;
+    border-style: dashed; */
+  }
+
+  .form-input-box {
+    background-color: var(--main);
+    color: var(--accent);
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--accent);
+    transition: background 700ms ease;
+  }
+  .form-input-box:placeholder-shown {
+    background-color: transparent;
+    color: var(--main);
+    border-width: 1px;
+    border-style: dashed;
+    border-color: var(--main);  
+  }
+  .form-input-box:focus {
+    background-color: var(--accent);
+    color: var(--main);
+    border-width: 1px;
+    border-style: dashed;
+    border-color: var(--main);
+  }
+
+  .create-account {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+  }
+
+  .create-account-button {
+    will-change:transform;
+    display: flex;
+    flex: 1;
+    align-self: flex-end;
+    align-items: center;
+    min-height:5vh;
+    min-width: 5vh;
+    color: var(--main);
+    background-color: var(--accent);
+    text-transform: lowercase;
+    transition: opacity 700ms ease,
+                background 200ms ease-out;
+  }
+
+/******
+ANIMATION
+*******/
+  .animate-button-step-0 {
+    opacity: 0.4;
+    border-width: 0px;
+    border-style: dotted;
+  }
+  .animate-button-step-1 {
+    opacity: 0.5;
+  }
+  .animate-button-step-2 {
+    opacity: 0.6;
+  }
+  .animate-button-step-3 {
+    opacity: 0.7;
+  }
+  .animate-button-step-4 {
+    opacity: 0.8;
+  }
+  .animate-button-step-5 {
+    opacity: 0.9;
+  }
+  .animate-button-step-6 {
+    background-color: var(--accent);
+    color: var(--main);
+    opacity: 1;
+    animation: shake 0.9s;
+    animation-iteration-count: 3;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, 0px) rotate(-1deg); }
+  20% { transform: translate(-1px, 0px) rotate(1deg); }
+  30% { transform: translate(1px, 0px) rotate(0deg); }
+  40% { transform: translate(0px, 0px) rotate(1deg); }
+  50% { transform: translate(0px, 0px) rotate(-1deg); }
+  60% { transform: translate(-1px, 0px) rotate(0deg); }
+  70% { transform: translate(1px, 0px) rotate(-1deg); }
+  80% { transform: translate(-1px, 0px) rotate(1deg); }
+  90% { transform: translate(1px, 0px) rotate(0deg); }
+  100% { transform: translate(1px, 1px) rotate(-1deg); }
+}
+.animate-button-step-6:hover {
+  animation:none;
+  border-color: var(--main);
+  border-width: 1px;
+  border-style: dashed;
+  color: var(--main);
+}
+/******
+MOBILE
+*******/
+  @media screen and (max-width: 850px) {
+    form label {
+      display:flex;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      letter-spacing: 0.07rem;
+      flex: 1;
+      margin: 0 auto;
+      padding: 0 auto;
+    }
+  
+    form label:before {
+      display: flex;
+      content: "";
+      flex: 0.5;
+      padding: 0.2vh;
+    }
+  
+    form input {
+      margin:0;
+      padding: 0.4vh;
+    }
+
+    .main {
+      flex-direction: column;
+      flex-flow: row;
+      margin: 0 auto;
+      padding: 1vh;
+    } 
+    .main > .left {
+      display: flex;
+      position: absolute;
+      flex: 1;
+      margin: 0 auto;
+      flex-direction: column;
+      flex-flow:column-reverse;
+      background-size: contain;
+      align-self: stretch;
+      max-height:80vh;
+
+    } 
+    .main > .right {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: column;    
+    padding: 0;
+    }
+    .form {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .form-row {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      max-width: 100%;
+      min-width: 50vh;
+      min-height: 1vh;
+      padding: 0.4vh 0 0.4vh 0;
+      margin: 0 auto;
+    }
+  }
